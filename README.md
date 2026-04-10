@@ -2,8 +2,6 @@
 
 An Open Source AI assistant that works seamlessly during meetings, interviews, and everyday conversations without anyone knowing. Privacy-first, highly customizable, and extremely fast.
 
-Built with **Tauri v2**, **React**, **Vite**, and **Tailwind CSS**.
-
 ## Features
 
 - **Privacy-First:** Your data stays on your machine.
@@ -15,84 +13,27 @@ Built with **Tauri v2**, **React**, **Vite**, and **Tailwind CSS**.
 
 ---
 
-## 🛠 Setting up your Dev Space
+## 🚀 How to Use the Application
 
-To start tweaking F1ck_OA and set it up to run its AI functions locally in your dev space, follow these steps:
+Using F1ck_OA as your personal stealthy AI Assistant is designed to be completely straightforward.
 
-### 1. Prerequisites
+### Setting up Your AI
 
-Before setting up your development space, ensure you have the following system dependencies installed:
+Because this is a privacy-first app, you bring your own AI API keys to use the models natively on your computer without a middle-man.
 
-- **Node.js** (v18 or higher)
-- **Rust and Cargo** - Get it via [rustup.rs](https://rustup.rs/)
+1. **Launch the App:** Open the `F1ck_OA` application.
+2. **Navigate to Settings:** Go to your **Dev Defaults** pane in the dashboard.
+3. **Configure Your Provider:** 
+   - Enter your API Key for an AI Provider you want to use (such as OpenAI, Anthropic Claude, or a local server like Ollama).
+   - *These keys are safely stored in your system's secure Keychain/Local Storage, ensuring they stay strictly on your device.*
+4. **Speech-to-Text (Optional):** If you plan on transcribing meetings or using voice commands, head to the "Speech Configs" tab and enable microphone streaming along with your preferred Transcription API.
 
-**For Linux Users:** 
-You must install OS-specific Tauri dependencies:
-```bash
-sudo apt-get update
-sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf libxdo-dev
-```
+### Interacting with F1ck_OA
 
-### 2. Environment Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/vaibhav2195/F1ck_OA.git
-   cd F1ck_OA
-   ```
-
-2. **Install project dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start the Development Server:**
-   Launch the app in the dev space:
-   ```bash
-   npm run tauri dev
-   ```
-   This will spin up a Vite development server and open the Tauri application window. Hot-Module Replacement (HMR) is enabled, meaning your code changes will reflect natively in the app immediately.
-
-### 3. Setting up the Application to run AI
-
-To effectively use F1ck_OA as your personal AI Assistant, configure the AI properties directly in the app.
-
-1. **Launch the app** and navigate to the **Settings** > **Dev Defaults** pane in the F1ck_OA dashboard.
-2. **Setup AI Providers:** 
-   - F1ck_OA supports multiple LLM endpoints natively. 
-   - Add your API Keys for your preferred provider (e.g., OpenAI, Anthropic, or an open-source local server endpoint like Ollama/LM Studio).
-3. **Speech to Text Setup (Optional):**
-   - Head over to the Speech configs tab to enable precise microphone streaming capabilities with supported APIs.
-4. Once keys are hooked into the interface securely using Tauri’s Keychain (or Local Storage), you can start interacting with the bot via the quick actions panel and shortcut bindings.
-
----
-
-## 📦 Building and Publishing
-
-F1ck_OA relies on GitHub Actions to safely build and release Windows and Linux applications automatically to avoid conflicting native local compilation errors.
-
-### Local Builds
-If you want to create an installer package locally:
-
-- **Linux (`.deb`)**
-  ```bash
-  npm run tauri build
-  ```
-  This creates an installer situated in `src-tauri/target/release/bundle/deb/`.
-
-### Releasing to GitHub (Windows & Linux)
-
-The repository is pre-configured with a `.github/workflows/release.yml` GitHub Action. 
-
-To automatically compile, bundle, and publish builds for Linux and Windows across GitHub Releases:
-
-1. Push your updated code to the `main` branch.
-2. Draft a new tag starting with `v` (e.g., `v0.1.0`) and push it:
-   ```bash
-   git tag v0.1.0
-   git push origin v0.1.0
-   ```
-3. GitHub Actions will intercept the commit, bootstrap Windows/Ubuntu environments natively, install the dependencies, build the `.msi` and `.deb` bundles respectively, and deploy them to the **Releases** tab of your repository as a draft format.
+- **Quick Actions:** Once your keys are set up, use the Quick Actions panel for one-click prompts or conversations.
+- **Global Shortcuts (Stealth Mode):** 
+  - F1ck_OA is optimized for background, invisible use during online meetings or calls. Use the built-in hotkeys to trigger AI assistance directly over whatever application you are focused on.
+  - You can customize your keybinds inside the Application Settings to instantly show/hide the app without tabbing out.
 
 ---
 

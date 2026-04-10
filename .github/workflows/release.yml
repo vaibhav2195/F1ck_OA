@@ -44,8 +44,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: app-v__VERSION__
-          releaseName: "F1ck_OA v__VERSION__"
-          releaseBody: "See the assets to download this version and install."
-          releaseDraft: true
+          tagName: ${{ github.ref_name }} # Uploads to the exact tag pushed by the user
+          releaseName: "F1ck_OA ${{ github.ref_name }}"
+          releaseBody: "See the assets below to download and install this version."
+          releaseDraft: false
           prerelease: false
