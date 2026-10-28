@@ -9,7 +9,7 @@ setup kaise karega ab ale alee? ye le:
 2. **Select AI Provider** mai LLM select karo or API dalo. (Assani ke liye openrouter ki api free hai jaao jeeo)
 3. **STT** ke liye bhi same process hai.
 
-jeeo mere lal! 🚩 `#Sunanda Sharma ki jai hoo`
+
 
 ---
 
